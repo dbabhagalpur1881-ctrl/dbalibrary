@@ -3,115 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>District Bar Association Library, Bhagalpur</title>
+<title>Law Research Library</title>
 
 <style>
 body{
-  margin:0;
-  font-family:Arial;
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
 }
 
 /* HEADER */
 header{
-  background:#002b5c;
-  color:white;
-  text-align:center;
-  padding:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:15px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
+header img{
+width:60px;height:60px;border-radius:50%;
 }
 
 /* NAV */
 nav{
-  display:flex;
-  justify-content:center;
-  background:#004080;
+display:flex;
+justify-content:center;
+gap:15px;
+background:rgba(255,255,255,0.1);
+padding:10px;
 }
 nav a{
-  color:white;
-  padding:10px;
-  text-decoration:none;
+color:white;
+text-decoration:none;
+padding:8px 15px;
+border-radius:20px;
 }
 nav a:hover{
-  background:red;
+background:#00c6ff;
 }
 
-/* HERO AUTO BACKGROUND */
+/* HERO */
 .hero{
-  height:300px;
-  color:white;
-  text-align:center;
-  padding:70px 20px;
-  background-size:cover;
-  background-position:center;
-  animation:bgSlider 15s infinite;
+height:350px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+animation:bgSlider 40s infinite;
+background-size:cover;
+background-position:center;
+text-align:center;
+}
+.hero h1{
+font-size:40px;
+color:#00ffe0;
+text-shadow:0 0 10px black;
 }
 
+/* SLIDER */
 @keyframes bgSlider{
-  0%{background-image:url('bg1.jpg');}
-  33%{background-image:url('bg2.jpg');}
-  66%{background-image:url('bg3.jpg');}
-  100%{background-image:url('bg1.jpg');}
+0%{background:url('bg1.jpg');}
+10%{background:url('bg2.jpg');}
+20%{background:url('bg3.jpg');}
+30%{background:url('bg4.jpg');}
+40%{background:url('bg5.jpg');}
+50%{background:url('bg6.jpg');}
+60%{background:url('bg7.jpg');}
+70%{background:url('bg8.jpg');}
+80%{background:url('bg9.jpg');}
+90%{background:url('bg10.jpg');}
 }
 
 /* SECTION */
 .section{padding:20px;}
-.cards{display:flex;flex-wrap:wrap;gap:10px;}
+
+/* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
 .card{
-  background:white;
-  padding:15px;
-  flex:1;
-  min-width:200px;
-  box-shadow:0 0 10px gray;
+flex:1;
+min-width:200px;
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 }
 
 /* TABLE */
 table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
+width:100%;
+border-collapse:collapse;
 }
 th,td{
-  border:1px solid gray;
-  padding:6px;
+padding:10px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+text-align:center;
 }
 th{
-  background:#002b5c;
-  color:white;
+background:#00c6ff;
+color:black;
 }
 
-/* FORM */
-form{
-  background:white;
-  padding:15px;
-  max-width:400px;
-  margin:auto;
+/* SEARCH */
+.search{
+text-align:center;
+padding:10px;
 }
-input,button{
-  width:100%;
-  padding:10px;
-  margin:5px 0;
-}
-button{
-  background:#004080;
-  color:white;
-  border:none;
+.search input{
+padding:10px;
+width:80%;
+max-width:300px;
+border:none;
+border-radius:5px;
 }
 
-/* TELEGRAM */
-.telegram-btn{
-  display:inline-block;
-  background:#0088cc;
-  color:white;
-  padding:10px 15px;
-  text-decoration:none;
-  border-radius:5px;
+/* NEWS */
+.news{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
+}
+.news div{
+background:rgba(255,255,255,0.1);
+padding:10px;
+border-radius:10px;
 }
 
 /* FOOTER */
 footer{
-  background:#002b5c;
-  color:white;
-  text-align:center;
-  padding:10px;
+text-align:center;
+padding:15px;
+background:rgba(0,0,0,0.5);
 }
 </style>
 </head>
@@ -119,116 +147,80 @@ footer{
 <body>
 
 <header>
-  <img src="logo.png" style="width:80px;border-radius:50%;">
-  <h2>District Bar Association Library, Bhagalpur</h2>
-  <p>Knowledge • Justice • Services</p>
+<img src="logo.jpg">
+<h2>District Bar Association Library, Bhagalpur</h2>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#air">AIR</a>
-  <a href="#books">Books</a>
-  <a href="#issue">Issue</a>
-  <a href="#contact">Contact</a>
+<a href="#">Home</a>
+<a href="#books">Books</a>
+<a href="#news">News</a>
 </nav>
 
 <div class="hero">
-  <h1>Welcome to Law Library</h1>
-  <p>Advocates | Students | Researchers</p>
+<h1>Law Research Library</h1>
+<p>Advocates • Students • Researchers</p>
 </div>
 
 <div class="section">
 <h2>Library Highlights</h2>
 <div class="cards">
-<div class="card">AIR Collection Complete</div>
-<div class="card">Bare Acts Updated</div>
-<div class="card">Timing: 10 AM – 5 PM</div>
+<div class="card">📚 AIR Collection</div>
+<div class="card">⚖️ Bare Acts</div>
+<div class="card">⏰ 10 AM – 5 PM</div>
 </div>
 </div>
 
-<!-- AIR -->
-<div class="section" id="air">
-<h2>AIR Collection</h2>
-<table>
-<tr><th>Almirah</th><th>Years</th><th>Status</th></tr>
-<tr><td>1</td><td>1914–1950</td><td>Available</td></tr>
-<tr><td>2</td><td>1951–1980</td><td>Available</td></tr>
-<tr><td>3</td><td>1981–2000</td><td>Good</td></tr>
-<tr><td>4</td><td>2001–2024</td><td>Updated</td></tr>
-</table>
+<div class="search">
+<input type="text" id="search" placeholder="Search Books..." onkeyup="search()">
 </div>
 
-<!-- BOOKS -->
-<div class="section" id="books">
-<h2>Bare Acts</h2>
-
-<input type="text" id="search" placeholder="Search book..." onkeyup="searchTable()">
-
-<table id="bookTable">
-<tr><th>Book Name</th><th>Category</th></tr>
-
+<table id="table">
+<tr><th>Book</th><th>Category</th></tr>
 <tr><td>Constitution of India</td><td>Law</td></tr>
-<tr><td>Bharatiya Nyaya Sanhita 2023</td><td>Criminal</td></tr>
-<tr><td>Indian Penal Code</td><td>Criminal</td></tr>
-<tr><td>CrPC</td><td>Procedure</td></tr>
+<tr><td>BNS 2023</td><td>Criminal</td></tr>
+<tr><td>IPC</td><td>Criminal</td></tr>
 <tr><td>CPC</td><td>Civil</td></tr>
-<tr><td>Evidence Act</td><td>Law</td></tr>
-<tr><td>Contract Act</td><td>Civil</td></tr>
-<tr><td>Transfer of Property Act</td><td>Civil</td></tr>
-<tr><td>Specific Relief Act</td><td>Civil</td></tr>
-<tr><td>Companies Act</td><td>Corporate</td></tr>
-
+<tr><td>CrPC</td><td>Procedure</td></tr>
 </table>
+
+<div class="section" id="news">
+<h2>Daily Newspapers</h2>
+
+<h3>Hindi</h3>
+<div class="news">
+<div>दैनिक जागरण</div>
+<div>दैनिक भास्कर</div>
+<div>हिंदुस्तान</div>
+<div>प्रभात खबर</div>
+<div>नई बात</div>
 </div>
 
-<!-- ISSUE -->
-<div class="section" id="issue">
-<h2>Issue Book</h2>
-<form onsubmit="submitForm(event)">
-<input type="text" placeholder="Name" required>
-<input type="text" placeholder="Enrollment">
-<input type="text" placeholder="Mobile">
-<input type="text" placeholder="Book Name">
-<button type="submit">Submit</button>
-</form>
-<p id="msg" style="color:green;text-align:center;"></p>
+<h3>English</h3>
+<div class="news">
+<div>The Times of India</div>
 </div>
 
-<!-- TELEGRAM -->
-<div class="section">
-<h2>Join Telegram</h2>
-<a href="https://t.me/+fzW6rtu3Fug1Yzdl" class="telegram-btn" target="_blank">
-Join Group
-</a>
+<h3>Urdu</h3>
+<div class="news">
+<div>Inquilab</div>
 </div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-<h2>Contact</h2>
-<p>📍 District Court Campus, Bhagalpur</p>
-<p>📞 7480927706</p>
-<p>📧 dbabhagalpur1881@gmail.com</p>
 </div>
 
 <footer>
-© 2026 District Bar Association Library
+© 2026 Law Research Library
 </footer>
 
 <script>
-function searchTable(){
+function search(){
 let input=document.getElementById("search").value.toLowerCase();
-let rows=document.querySelectorAll("#bookTable tr");
+let rows=document.querySelectorAll("#table tr");
 
 rows.forEach((row,i)=>{
 if(i==0)return;
 let text=row.innerText.toLowerCase();
 row.style.display=text.includes(input)?"":"none";
 });
-}
-
-function submitForm(e){
-e.preventDefault();
-document.getElementById("msg").innerText="Request Submitted!";
 }
 </script>
 
