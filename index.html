@@ -3,46 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law Research Library</title>
 
-<title>District Bar Association Library, Bhagalpur</title>
+<link rel="manifest" href="manifest.json">
 
 <style>
 body{margin:0;font-family:Poppins;background:#0a0f1c;color:white}
 
 /* HEADER */
-header{
-display:flex;align-items:center;justify-content:center;
-gap:10px;padding:15px;background:#002b5c
-}
+header{display:flex;justify-content:center;align-items:center;gap:10px;padding:15px;background:#002b5c}
 header img{width:60px;border-radius:50%}
 
 /* NAV */
-nav{
-display:flex;justify-content:center;gap:10px;
-background:#004080;flex-wrap:wrap
-}
+nav{display:flex;justify-content:center;gap:10px;background:#004080;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;padding:10px}
 
 /* HERO */
-.hero{height:80vh;position:relative;overflow:hidden}
-.slide{
-position:absolute;width:100%;height:100%;
-background-size:cover;background-position:center;
-opacity:0;transition:1s
-}
+.hero{height:100vh;position:relative;overflow:hidden}
+.hero video{position:absolute;width:100%;height:100%;object-fit:cover}
+
+/* SLIDER */
+.slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s}
 .slide.active{opacity:1}
 
+/* OVERLAY */
+.overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6)}
+
+/* HERO TEXT */
 .hero-text{
 position:absolute;top:50%;left:50%;
 transform:translate(-50%,-50%);
-text-align:center
+text-align:center;z-index:2
 }
-.hero-text h2{color:#00ffe0;font-size:40px}
+
+/* TYPING */
+.typing{
+border-right:3px solid #00ffe0;
+white-space:nowrap;
+overflow:hidden;
+animation:typing 4s steps(25), blink 0.7s infinite;
+}
+@keyframes typing{from{width:0}to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+
+/* TAGLINES */
+.tagline{font-size:18px}
+.tagline2{font-size:16px;color:#00ffe0}
+.tagline3{font-size:14px;color:#ccc}
 
 /* SECTION */
 .section{padding:20px}
 
-/* CARD */
+/* CARDS */
 .cards{display:flex;flex-wrap:wrap;gap:10px}
 .card{flex:1;min-width:200px;background:#111;padding:15px;border-radius:10px}
 
@@ -56,18 +68,19 @@ form{background:#111;padding:15px;border-radius:10px}
 input,textarea,button{width:100%;padding:10px;margin:5px 0}
 button{background:#00ffe0}
 
-/* NEWS */
-.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.news div{background:#222;padding:10px;border-radius:10px}
-
 /* GALLERY */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
 .gallery img{width:100%;border-radius:10px}
 
 /* FLOAT */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:green;color:white;padding:10px;border-radius:50%}
-.telegram{position:fixed;bottom:80px;right:20px;background:#0088cc;color:white;padding:10px;border-radius:50%}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:green;padding:10px;border-radius:50%}
+.telegram{position:fixed;bottom:80px;right:20px;background:#0088cc;padding:10px;border-radius:50%}
 
+/* CHATBOT */
+#chatBtn{position:fixed;bottom:20px;left:20px;background:#00ffe0;padding:12px;border-radius:50%}
+#chatBox{position:fixed;bottom:80px;left:20px;width:250px;background:#111;padding:10px;border-radius:10px;display:none}
+
+/* FOOTER */
 footer{text-align:center;padding:10px;background:#000}
 </style>
 </head>
@@ -81,108 +94,81 @@ footer{text-align:center;padding:10px;background:#000}
 
 <nav>
 <a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#catalog">Catalog</a>
-<a href="#issue">Issue</a>
+<a href="#resources">Resources</a>
+<a href="#searchlaw">Search Law</a>
+<a href="#summarizer">AI</a>
 <a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
+
+<video autoplay muted loop>
+<source src="bgvideo.mp4" type="video/mp4">
+</video>
+
 <div class="slide active" style="background-image:url('bg1.jpg')"></div>
-<div class="slide" style="background-image:url('bg2.jpg')"></div>
-<div class="slide" style="background-image:url('bg3.jpg')"></div>
+
+<div class="overlay"></div>
 
 <div class="hero-text">
-<h1>Welcome to</h1>
-<h2>Law Research Library</h2>
-</div>
+<h1>WELCOME TO</h1>
+<h2 class="typing">LAW RESEARCH LIBRARY</h2>
+<h1>BHAGALPUR</h1>
+
+<p class="tagline">Advocates • Students • Researchers</p>
+<p class="tagline2">AIR • Bare Acts • Legal Journals Available</p>
+<p class="tagline3">Open Daily: 10:00 AM – 05:00 PM | District Court Campus, Bhagalpur</p>
 </div>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-<h2>About Library</h2>
-<p>District Bar Association Library, Bhagalpur provides legal resources including AIR, Bare Acts, Journals and modern research facilities for advocates and students.</p>
 </div>
 
-<!-- HIGHLIGHTS -->
-<div class="section">
+<!-- RESOURCES -->
+<div class="section" id="resources">
+<h2>Legal Resources</h2>
 <div class="cards">
-<div class="card">AIR Collection</div>
-<div class="card">Bare Acts 2026</div>
-<div class="card">10 AM – 5 PM</div>
+<a href="https://indiankanoon.org" target="_blank"><div class="card">Indian Kanoon</div></a>
+<a href="https://ecourts.gov.in" target="_blank"><div class="card">eCourts</div></a>
+<a href="https://main.sci.gov.in" target="_blank"><div class="card">Supreme Court</div></a>
 </div>
 </div>
 
-<!-- CATALOG -->
-<div class="section" id="catalog">
-<h2>Library Catalog</h2>
-<input placeholder="Search..." onkeyup="search(this.value)">
-
-<table id="table">
-<tr><th>Book</th><th>Category</th><th>Status</th></tr>
-<tr><td>BNS</td><td>Criminal</td><td>Available</td></tr>
-<tr><td>BNSS</td><td>Procedure</td><td>Available</td></tr>
-<tr><td>BSA</td><td>Evidence</td><td>Available</td></tr>
-</table>
+<!-- SEARCH -->
+<div class="section" id="searchlaw">
+<h2>Search Case</h2>
+<input id="lawSearch">
+<button onclick="searchLaw()">Search</button>
 </div>
 
-<!-- ISSUE -->
-<div class="section" id="issue">
-<h2>Issue Book</h2>
-<form onsubmit="issue(event)">
-<input placeholder="Name" required>
-<input placeholder="Book Name" required>
-<input type="date">
-<button>Submit</button>
-</form>
-<p id="msg"></p>
-</div>
-
-<!-- NOTICE -->
-<div class="section">
-<h2>Notice Board</h2>
-<p>📢 Library open 10 AM – 5 PM</p>
-<p>📢 New Criminal Laws Available</p>
-</div>
-
-<!-- NEWS -->
-<div class="section">
-<h2>Newspapers</h2>
-<div class="news">
-<div>दैनिक जागरण</div>
-<div>दैनिक भास्कर</div>
-<div>हिंदुस्तान</div>
-<div>प्रभात खबर</div>
-<div>Inquilab</div>
-</div>
+<!-- SUMMARIZER -->
+<div class="section" id="summarizer">
+<h2>AI Case Summarizer</h2>
+<textarea id="caseText"></textarea>
+<button onclick="summarize()">Summarize</button>
+<div id="summaryBox"></div>
 </div>
 
 <!-- GALLERY -->
 <div class="section" id="gallery">
-<h2>Gallery</h2>
-<a href="YOUR_FORM_LINK" target="_blank">
-<button>Upload Image</button>
-</a>
+<input type="file" id="imgInput">
+<button onclick="uploadImg()">Upload</button>
 <div class="gallery" id="galleryBox"></div>
 </div>
 
-<!-- CONTACT -->
-<div class="section" id="contact">
-<h2>Contact</h2>
-<p><a href="tel:7480927706">📞 Call</a></p>
-<p><a href="mailto:dbabhagalpur1881@gmail.com">📧 Email</a></p>
-<p>District Court Campus, Bhagalpur</p>
-</div>
-
 <footer>
-© 2026 District Bar Association Library
+© 2026 District Bar Association Library, Bhagalpur
 </footer>
 
-<!-- FLOAT -->
 <a class="whatsapp" href="https://wa.me/917480927706">W</a>
-<a class="telegram" href="YOUR_TELEGRAM_LINK">T</a>
+<a class="telegram" href="#">T</a>
+
+<!-- CHATBOT -->
+<div id="chatBtn" onclick="toggleChat()">💬</div>
+<div id="chatBox">
+<div id="chatArea"></div>
+<input id="chatInput">
+<button onclick="sendMsg()">Send</button>
+</div>
 
 <script>
 
@@ -196,18 +182,51 @@ slides[i].classList.add("active");
 },3000);
 
 /* SEARCH */
-function search(val){
-let rows=document.querySelectorAll("#table tr");
-rows.forEach((r,i)=>{
-if(i==0)return;
-r.style.display=r.innerText.toLowerCase().includes(val.toLowerCase())?"":"none";
-});
+function searchLaw(){
+let q=document.getElementById("lawSearch").value;
+window.open("https://indiankanoon.org/search/?formInput="+q);
 }
 
-/* ISSUE */
-function issue(e){
-e.preventDefault();
-document.getElementById("msg").innerText="Book Requested!";
+/* SUMMARIZER */
+function summarize(){
+let t=document.getElementById("caseText").value;
+let s=t.split(".").slice(0,3).join(".");
+document.getElementById("summaryBox").innerText=s;
+}
+
+/* GALLERY */
+function uploadImg(){
+let f=document.getElementById("imgInput").files[0];
+let r=new FileReader();
+r.onload=function(e){
+let d=JSON.parse(localStorage.getItem("gallery"))||[];
+d.push(e.target.result);
+localStorage.setItem("gallery",JSON.stringify(d));
+loadGallery();
+}
+r.readAsDataURL(f);
+}
+
+function loadGallery(){
+let d=JSON.parse(localStorage.getItem("gallery"))||[];
+let box=document.getElementById("galleryBox");
+box.innerHTML="";
+d.forEach(i=>box.innerHTML+=`<img src="${i}">`);
+}
+loadGallery();
+
+/* CHATBOT */
+function toggleChat(){
+let b=document.getElementById("chatBox");
+b.style.display=b.style.display==="none"?"block":"none";
+}
+
+function sendMsg(){
+let msg=document.getElementById("chatInput").value;
+let area=document.getElementById("chatArea");
+
+area.innerHTML+=`<p>You: ${msg}</p>`;
+area.innerHTML+=`<p>Bot: Library 10AM-5PM open hai.</p>`;
 }
 
 </script>
