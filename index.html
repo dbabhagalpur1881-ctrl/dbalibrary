@@ -135,6 +135,7 @@ nav a:hover{
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center center;
   opacity:0;
   animation:slideShow 50s infinite;
 }
@@ -255,64 +256,11 @@ nav a:hover{
   color:white;
 }
 
-.primary-btn:hover{
-  transform:translateY(-4px);
-}
-
-.secondary-btn:hover{
-  background:white;
-  color:#00142d;
-}
-
 .news-ticker{
   background:#00d4ff;
   color:#00142d;
   padding:12px;
   font-weight:600;
-}
-
-.section-title{
-  font-size:38px;
-  font-weight:800;
-  margin-bottom:30px;
-  position:relative;
-}
-
-.section-title::after{
-  content:'';
-  width:80px;
-  height:5px;
-  background:#00ffe7;
-  position:absolute;
-  left:0;
-  bottom:-10px;
-  border-radius:10px;
-}
-
-@media(max-width:768px){
-
-  .top-header{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .logo-text h1{
-    font-size:18px;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero h3{
-    font-size:24px;
-  }
-
-  .hero h2{
-    font-size:16px;
-    letter-spacing:3px;
-  }
-
 }
 </style>
 </head>
@@ -332,7 +280,9 @@ nav a:hover{
 
     <div class="header-buttons">
       <a href="tel:7480922770">📞 Call</a>
-      <a href="https://t.me/yourgroup">✈ Telegram</a>
+      <a href="https://t.me/+fzW6rtu3Fug1Yzdl" target="_blank">✈ Telegram</a>
+      <a href="https://youtube.com/@aichitraverse?si=YM82mAZg84UcHLgM" target="_blank">▶ YouTube</a>
+      <a href="https://www.instagram.com/aichitraverse/" target="_blank">📷 Instagram</a>
     </div>
 
   </div>
@@ -400,46 +350,138 @@ nav a:hover{
   </div>
 </section>
 
-  <!-- SMART SEARCH -->
+<style>
+.section-title{
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:30px;
+  position:relative;
+}
+
+.section-title::after{
+  content:'';
+  width:80px;
+  height:5px;
+  background:#00ffe7;
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  border-radius:10px;
+}
+
+.table-box{
+  overflow-x:auto;
+  background:#071a2d;
+  padding:20px;
+  border-radius:20px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:800px;
+}
+
+table th{
+  background:#00ffe7;
+  color:#00142d;
+  padding:16px;
+  font-size:15px;
+}
+
+table td{
+  padding:16px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  color:#d8d8d8;
+}
+
+.dashboard-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:40px;
+}
+
+.dashboard-card{
+  background:#071a2d;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.dashboard-card h3{
+  font-size:40px;
+  color:#00ffe7;
+}
+
+.search-box{
+  margin-bottom:40px;
+}
+
+.search-box input{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:15px;
+  background:#0b2440;
+  color:white;
+  font-size:16px;
+  border:1px solid rgba(0,255,231,0.2);
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.info-card{
+  background:#071a2d;
+  padding:25px;
+  border-radius:20px;
+}
+
+.info-card h3{
+  color:#00ffe7;
+  margin-bottom:10px;
+}
+</style>
+
 <section style="padding:60px 8%; background:#04172b;" id="books">
 
   <h2 class="section-title">Smart Library Search</h2>
 
-  <div style="margin-bottom:30px;">
-    <input type="text" id="globalSearch" placeholder="Search AIR Volumes, Bare Acts, Authors, Courts..." style="width:100%;padding:18px;border:none;border-radius:15px;background:#0b2440;color:white;font-size:16px;border:1px solid rgba(0,255,231,0.2);">
+  <div class="search-box">
+    <input type="text" id="globalSearch" placeholder="Search AIR Volumes, Bare Acts, Authors, Courts...">
   </div>
 
-  <!-- DASHBOARD -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:40px;">
-
-    <div style="background:#0b2440;padding:25px;border-radius:18px;text-align:center;">
-      <h3 style="font-size:36px;color:#00ffe7;">494+</h3>
+  <div class="dashboard-box">
+    <div class="dashboard-card">
+      <h3>494+</h3>
       <p>AIR Volumes</p>
     </div>
 
-    <div style="background:#0b2440;padding:25px;border-radius:18px;text-align:center;">
-      <h3 style="font-size:36px;color:#00ffe7;">155+</h3>
+    <div class="dashboard-card">
+      <h3>155+</h3>
       <p>Bare Acts</p>
     </div>
 
-    <div style="background:#0b2440;padding:25px;border-radius:18px;text-align:center;">
-      <h3 style="font-size:36px;color:#00ffe7;">9</h3>
+    <div class="dashboard-card">
+      <h3>9</h3>
       <p>Almirahs</p>
     </div>
 
-    <div style="background:#0b2440;padding:25px;border-radius:18px;text-align:center;">
-      <h3 style="font-size:36px;color:#00ffe7;">1881</h3>
+    <div class="dashboard-card">
+      <h3>1881</h3>
       <p>Established</p>
     </div>
-
   </div>
 
-  <!-- AIR SECTION -->
   <section id="air" style="margin-bottom:70px;">
     <h2 class="section-title">AIR Series Collection</h2>
 
-    <div style="overflow-x:auto;background:#071a2d;padding:20px;border-radius:20px;">
-      <table style="width:100%;min-width:800px;">
+    <div class="table-box">
+      <table>
         <thead>
           <tr>
             <th>Series</th>
@@ -490,43 +532,42 @@ nav a:hover{
     </div>
   </section>
 
-  <!-- BARE ACTS -->
   <section style="margin-bottom:70px;">
     <h2 class="section-title">Bare Acts Collection</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+    <div class="card-grid">
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Bharatiya Nyaya Sanhita</h3>
         <p>Edition: 2023</p>
         <p>Status: Available</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Bharatiya Nagarik Suraksha Sanhita</h3>
         <p>Edition: 2023</p>
         <p>Status: Available</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Bharatiya Sakshya Adhiniyam</h3>
         <p>Edition: 2023</p>
         <p>Status: Available</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Constitution of India</h3>
         <p>Edition: 2026</p>
         <p>Status: Available</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Transfer of Property Act</h3>
         <p>Edition: 2026</p>
         <p>Status: Available</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Indian Contract Act</h3>
         <p>Edition: 2026</p>
         <p>Status: Available</p>
@@ -535,209 +576,253 @@ nav a:hover{
     </div>
   </section>
 
-  <!-- NEWSPAPER SECTION -->
   <section style="margin-bottom:70px;">
     <h2 class="section-title">Daily Newspapers</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+    <div class="card-grid">
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Hindi Newspapers</h3>
-        <ul style="margin-top:15px;line-height:2;">
-          <li>दैनिक जागरण</li>
-          <li>दैनिक भास्कर</li>
-          <li>हिंदुस्तान</li>
-          <li>प्रभात खबर</li>
-          <li>नई बात</li>
-        </ul>
+        <p>दैनिक जागरण</p>
+        <p>दैनिक भास्कर</p>
+        <p>हिंदुस्तान</p>
+        <p>प्रभात खबर</p>
+        <p>नई बात</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>English Newspapers</h3>
-        <ul style="margin-top:15px;line-height:2;">
-          <li>The Times of India</li>
-        </ul>
+        <p>The Times of India</p>
       </div>
 
-      <div style="background:#0b2440;padding:20px;border-radius:20px;">
+      <div class="info-card">
         <h3>Urdu Newspapers</h3>
-        <ul style="margin-top:15px;line-height:2;">
-          <li>The Inquilab</li>
-        </ul>
+        <p>The Inquilab</p>
       </div>
 
     </div>
   </section>
 
-  <!-- LEGAL RESOURCES -->
   <section style="margin-bottom:70px;">
     <h2 class="section-title">Free Legal Resources</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+    <div class="card-grid">
 
-      <a href="https://indiankanoon.org" target="_blank" style="text-decoration:none;">
-        <div style="background:#0b2440;padding:20px;border-radius:20px;color:white;">
-          Indian Kanoon
-        </div>
-      </a>
+      <div class="info-card">
+        <h3>Indian Kanoon</h3>
+        <p>Case law and judgments search platform</p>
+      </div>
 
-      <a href="https://ecourts.gov.in" target="_blank" style="text-decoration:none;">
-        <div style="background:#0b2440;padding:20px;border-radius:20px;color:white;">
-          eCourts India
-        </div>
-      </a>
+      <div class="info-card">
+        <h3>eCourts India</h3>
+        <p>Check case status and court details</p>
+      </div>
 
-      <a href="https://main.sci.gov.in" target="_blank" style="text-decoration:none;">
-        <div style="background:#0b2440;padding:20px;border-radius:20px;color:white;">
-          Supreme Court of India
-        </div>
-      </a>
+      <div class="info-card">
+        <h3>Supreme Court of India</h3>
+        <p>Official Supreme Court portal</p>
+      </div>
 
-      <a href="https://legislative.gov.in" target="_blank" style="text-decoration:none;">
-        <div style="background:#0b2440;padding:20px;border-radius:20px;color:white;">
-          Bare Acts Portal
-        </div>
-      </a>
+      <div class="info-card">
+        <h3>Legislative Department</h3>
+        <p>Bare Acts and central laws portal</p>
+      </div>
 
     </div>
   </section>
 
 </section>
+<style>
+.form-section{
+  padding:60px 8%;
+  background:#031225;
+}
 
-  <!-- MEMBERSHIP FORM -->
-<section style="padding:60px 8%; background:#031225;" id="membership">
+.form-box{
+  background:#071a2d;
+  padding:30px;
+  border-radius:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:#0b2440;
+  color:white;
+}
+
+.form-box button{
+  padding:18px;
+  border:none;
+  border-radius:14px;
+  background:#00ffe7;
+  color:#00142d;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.ai-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.ai-card{
+  background:#071a2d;
+  padding:25px;
+  border-radius:20px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+}
+</style>
+
+<section class="form-section" id="membership">
 
   <h2 class="section-title">Library Membership Form</h2>
 
-  <form style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;background:#071a2d;padding:30px;border-radius:20px;">
+  <div class="form-box">
+    <div class="form-grid">
 
-    <input type="text" placeholder="Full Name" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
-    
-    <input type="text" placeholder="Enrollment Number" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
-    
-    <input type="tel" placeholder="Mobile Number" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
-    
-    <input type="email" placeholder="Email Address" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
-    
-    <select style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
-      <option>Advocate</option>
-      <option>Student</option>
-      <option>Researcher</option>
-    </select>
+      <input type="text" placeholder="Full Name">
+      <input type="text" placeholder="Enrollment Number">
+      <input type="tel" placeholder="Mobile Number">
+      <input type="email" placeholder="Email Address">
 
-    <textarea placeholder="Purpose of Membership" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;min-height:120px;"></textarea>
+      <select>
+        <option>Advocate</option>
+        <option>Student</option>
+        <option>Researcher</option>
+      </select>
 
-    <button type="submit" style="padding:18px;border:none;border-radius:14px;background:#00ffe7;color:#00142d;font-weight:700;">
-      Apply for Membership
-    </button>
+      <textarea placeholder="Purpose of Membership"></textarea>
 
-  </form>
+    </div>
+
+    <br>
+    <button>Apply for Membership</button>
+  </div>
+
 </section>
 
-<!-- ISSUE REQUEST -->
-<section style="padding:60px 8%; background:#04172b;" id="issue">
+<section class="form-section" id="issue">
 
   <h2 class="section-title">Book Issue Request</h2>
 
-  <form style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;background:#071a2d;padding:30px;border-radius:20px;">
+  <div class="form-box">
+    <div class="form-grid">
 
-    <input type="text" placeholder="Your Name" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Book Name">
+      <input type="text" placeholder="AIR Volume / Bare Act Name">
+      <input type="date">
 
-    <input type="text" placeholder="Book Name" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
+      <textarea placeholder="Additional Details"></textarea>
 
-    <input type="text" placeholder="AIR Volume / Bare Act Name" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
+    </div>
 
-    <input type="date" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;">
+    <br>
+    <button>Submit Request</button>
+  </div>
 
-    <textarea placeholder="Additional Details" style="padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;min-height:120px;"></textarea>
-
-    <button type="submit" style="padding:18px;border:none;border-radius:14px;background:#00ffe7;color:#00142d;font-weight:700;">
-      Submit Request
-    </button>
-
-  </form>
 </section>
 
-<!-- AI TOOLS -->
-<section style="padding:60px 8%; background:#031225;" id="ai-tools">
+<section class="form-section" id="ai-tools">
 
   <h2 class="section-title">AI Legal Tools</h2>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+  <div class="ai-grid">
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="margin-bottom:15px;">AI Case Summarizer</h3>
-      <textarea id="caseText" placeholder="Paste case / judgment here..." style="width:100%;padding:15px;border:none;border-radius:12px;background:#0b2440;color:white;min-height:150px;"></textarea>
-      <button onclick="summarizeCase()" style="margin-top:15px;padding:15px 20px;border:none;border-radius:12px;background:#00ffe7;color:#00142d;font-weight:700;">Summarize</button>
+    <div class="ai-card">
+      <h3 style="margin-bottom:15px;color:#00ffe7;">AI Case Summarizer</h3>
+      <textarea id="caseText" placeholder="Paste case / judgment here..." style="min-height:150px;"></textarea>
+      <br><br>
+      <button onclick="summarizeCase()">Summarize</button>
       <div id="summaryResult" style="margin-top:15px;color:#d8d8d8;"></div>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="margin-bottom:15px;">AI Chatbot</h3>
-      <input type="text" id="chatInput" placeholder="Ask about library, books, AIR..." style="width:100%;padding:15px;border:none;border-radius:12px;background:#0b2440;color:white;">
-      <button onclick="chatBot()" style="margin-top:15px;padding:15px 20px;border:none;border-radius:12px;background:#00ffe7;color:#00142d;font-weight:700;">Ask</button>
+    <div class="ai-card">
+      <h3 style="margin-bottom:15px;color:#00ffe7;">AI Chatbot</h3>
+      <input type="text" id="chatInput" placeholder="Ask about library, books, AIR...">
+      <br><br>
+      <button onclick="chatBot()">Ask</button>
       <div id="chatResult" style="margin-top:15px;color:#d8d8d8;"></div>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="margin-bottom:15px;">Indian Kanoon Search</h3>
-      <input type="text" id="lawSearch" placeholder="Search legal cases..." style="width:100%;padding:15px;border:none;border-radius:12px;background:#0b2440;color:white;">
-      <button onclick="searchLaw()" style="margin-top:15px;padding:15px 20px;border:none;border-radius:12px;background:#00ffe7;color:#00142d;font-weight:700;">Search</button>
+    <div class="ai-card">
+      <h3 style="margin-bottom:15px;color:#00ffe7;">Indian Kanoon Search</h3>
+      <input type="text" id="lawSearch" placeholder="Search legal cases...">
+      <br><br>
+      <button onclick="searchLaw()">Search</button>
     </div>
 
   </div>
+
 </section>
 
-<!-- GALLERY -->
-<section style="padding:60px 8%; background:#04172b;" id="gallery">
+<section class="form-section" id="gallery">
 
   <h2 class="section-title">Library Gallery</h2>
 
-  <div style="background:#071a2d;padding:25px;border-radius:20px;margin-bottom:30px;">
-    <input type="file" id="galleryInput" style="margin-bottom:20px;color:white;">
-    <button onclick="uploadGalleryImage()" style="padding:15px 20px;border:none;border-radius:12px;background:#00ffe7;color:#00142d;font-weight:700;">Upload Image</button>
+  <div class="form-box" style="margin-bottom:30px;">
+    <input type="file" id="galleryInput" style="margin-bottom:20px;">
+    <button onclick="uploadGalleryImage()">Upload Image</button>
   </div>
 
-  <div id="galleryGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
-
-    <img src="bg1.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:20px;">
-    <img src="bg2.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:20px;">
-    <img src="bg3.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:20px;">
-    <img src="bg4.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:20px;">
-
+  <div class="gallery-grid" id="galleryGrid">
+    <img src="bg1.jpg">
+    <img src="bg2.jpg">
+    <img src="bg3.jpg">
+    <img src="bg4.jpg">
   </div>
 
 </section>
 
-<!-- FEEDBACK -->
-<section style="padding:60px 8%; background:#031225;">
+<section class="form-section">
 
   <h2 class="section-title">Feedback & Rating</h2>
 
-  <form style="background:#071a2d;padding:30px;border-radius:20px;">
+  <div class="form-box">
 
-    <input type="text" placeholder="Your Name" style="width:100%;padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;margin-bottom:15px;">
+    <input type="text" placeholder="Your Name" style="margin-bottom:15px;">
 
-    <textarea placeholder="Write your feedback..." style="width:100%;padding:16px;border:none;border-radius:12px;background:#0b2440;color:white;min-height:120px;margin-bottom:15px;"></textarea>
+    <textarea placeholder="Write your feedback..." style="min-height:120px;margin-bottom:15px;"></textarea>
 
     <div style="font-size:28px;color:#ffd700;margin-bottom:20px;">
       ★ ★ ★ ★ ★
     </div>
 
-    <button type="submit" style="padding:18px 24px;border:none;border-radius:14px;background:#00ffe7;color:#00142d;font-weight:700;">
-      Submit Feedback
-    </button>
+    <button>Submit Feedback</button>
 
-  </form>
+  </div>
+
 </section>
-
-  <!-- HOLIDAY SECTION -->
-<section style="padding:60px 8%; background:#04172b;" id="holidays">
+<section class="form-section" id="holidays">
 
   <h2 class="section-title">Bihar Government Holidays 2026</h2>
 
-  <div style="overflow-x:auto;background:#071a2d;padding:20px;border-radius:20px;">
-    <table style="width:100%;min-width:700px;">
+  <div class="table-box">
+    <table>
       <thead>
         <tr>
           <th>Date</th>
@@ -772,88 +857,81 @@ nav a:hover{
 
 </section>
 
-<!-- NOTICES -->
-<section style="padding:60px 8%; background:#031225;">
+<section class="form-section">
 
   <h2 class="section-title">Latest Notices</h2>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+  <div class="card-grid">
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="color:#00ffe7;">Library Membership Renewal</h3>
-      <p style="margin-top:10px;color:#d8d8d8;">All advocates are requested to renew their membership before 30 April 2026.</p>
+    <div class="info-card">
+      <h3>Library Membership Renewal</h3>
+      <p>All advocates are requested to renew their membership before 30 April 2026.</p>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="color:#00ffe7;">Restricted AIR Volumes</h3>
-      <p style="margin-top:10px;color:#d8d8d8;">AIR 1914–1938 volumes are available only for supervised reference.</p>
+    <div class="info-card">
+      <h3>Restricted AIR Volumes</h3>
+      <p>AIR 1914–1938 volumes are available only for supervised reference.</p>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
-      <h3 style="color:#00ffe7;">New Criminal Laws Added</h3>
-      <p style="margin-top:10px;color:#d8d8d8;">BNS 2023, BNSS 2023 and BSA 2023 are now available in the library.</p>
+    <div class="info-card">
+      <h3>New Criminal Laws Added</h3>
+      <p>BNS 2023, BNSS 2023 and BSA 2023 are now available in the library.</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- CONTACT -->
-<section style="padding:60px 8%; background:#04172b;" id="contact">
+<section class="form-section" id="contact">
 
   <h2 class="section-title">Contact Us</h2>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+  <div class="card-grid">
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
+    <div class="info-card">
       <h3>📍 Address</h3>
-      <p style="margin-top:15px;color:#d8d8d8;">
-        District Court Campus,<br>
-        Bhagalpur, Bihar
-      </p>
+      <p>District Court Campus, Bhagalpur, Bihar</p>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
+    <div class="info-card">
       <h3>📞 Phone</h3>
-      <p style="margin-top:15px;color:#d8d8d8;">
-        7480922770
-      </p>
+      <p>7480922770</p>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
+    <div class="info-card">
       <h3>📧 Email</h3>
-      <p style="margin-top:15px;color:#d8d8d8;">
-        dbabhagalpur1881@gmail.com
-      </p>
+      <p>dbabhagalpur1881@gmail.com</p>
     </div>
 
-    <div style="background:#071a2d;padding:25px;border-radius:20px;">
+    <div class="info-card">
       <h3>🕒 Timing</h3>
-      <p style="margin-top:15px;color:#d8d8d8;">
-        Monday – Saturday<br>
-        10:00 AM – 05:00 PM
-      </p>
+      <p>Monday – Saturday<br>10:00 AM – 05:00 PM</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer style="background:#00101f;padding:30px 8%;text-align:center;border-top:1px solid rgba(255,255,255,0.08);">
   <p style="color:#d8d8d8;">© 2026 District Bar Association Library, Bhagalpur</p>
 </footer>
 
-<!-- FLOATING BUTTONS -->
 <a href="https://wa.me/917480922770" target="_blank" style="position:fixed;bottom:25px;right:25px;width:60px;height:60px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;">
   W
 </a>
 
-<a href="https://t.me/yourgroup" target="_blank" style="position:fixed;bottom:95px;right:25px;width:60px;height:60px;border-radius:50%;background:#0088cc;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;">
+<a href="https://t.me/+fzW6rtu3Fug1Yzdl" target="_blank" style="position:fixed;bottom:95px;right:25px;width:60px;height:60px;border-radius:50%;background:#0088cc;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;">
   T
 </a>
 
-<!-- JAVASCRIPT -->
+<a href="https://youtube.com/@aichitraverse?si=YM82mAZg84UcHLgM" target="_blank" style="position:fixed;bottom:165px;right:25px;width:60px;height:60px;border-radius:50%;background:red;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999;">
+  Y
+</a>
+
+<a href="https://www.instagram.com/aichitraverse/" target="_blank" style="position:fixed;bottom:235px;right:25px;width:60px;height:60px;border-radius:50%;background:#E1306C;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999;">
+  I
+</a>
+
 <script>
 document.getElementById('globalSearch').addEventListener('keyup', function(){
   let value = this.value.toLowerCase();
@@ -930,5 +1008,25 @@ function uploadGalleryImage(){
 
 </body>
 </html>
+<div class="header-buttons">
+  <a href="tel:7480922770">📞 Call</a>
+  <a href="https://t.me/+fzW6rtu3Fug1Yzdl" target="_blank">✈ Telegram</a>
+  <a href="https://youtube.com/@aichitraverse?si=YM82mAZg84UcHLgM" target="_blank">▶ YouTube</a>
+  <a href="https://www.instagram.com/aichitraverse/" target="_blank">📷 Instagram</a>
+</div>
 
+<a href="https://wa.me/917480922770" target="_blank" style="position:fixed;bottom:25px;right:25px;width:60px;height:60px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;">
+  W
+</a>
 
+<a href="https://t.me/+fzW6rtu3Fug1Yzdl" target="_blank" style="position:fixed;bottom:95px;right:25px;width:60px;height:60px;border-radius:50%;background:#0088cc;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999;">
+  T
+</a>
+
+<a href="https://youtube.com/@aichitraverse?si=YM82mAZg84UcHLgM" target="_blank" style="position:fixed;bottom:165px;right:25px;width:60px;height:60px;border-radius:50%;background:red;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999;">
+  Y
+</a>
+
+<a href="https://www.instagram.com/aichitraverse/" target="_blank" style="position:fixed;bottom:235px;right:25px;width:60px;height:60px;border-radius:50%;background:#E1306C;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999;">
+  I
+</a>
